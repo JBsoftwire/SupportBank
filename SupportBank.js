@@ -1,4 +1,6 @@
-let fs = require('fs');
+const fs = require('fs');
+const readline = require('readline-sync')
+
 //let parse = require('csv-parse');
 class Account {
     constructor(balance, transacts) {
@@ -44,9 +46,9 @@ function populateAccounts(transactions, accountMap) {//populates the database
         let target = transactions[i][2];
         let value = parseFloat(transactions[i][4]);
         accountMap.get(source).balance -= value;
-        accountMap.get(source).transacts[accountMap.get(source).transacts.length] = i
+        accountMap.get(source).transacts[accountMap.get(source).transacts.length] = i;
         accountMap.get(target).balance += value;
-        accountMap.get(target).transacts[accountMap.get(target).transacts.length] = i
+        accountMap.get(target).transacts[accountMap.get(target).transacts.length] = i;
     }
     return accountMap
 }
@@ -66,11 +68,33 @@ fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
 
     let lines = splitLines(data);
     let transactions = processLines(lines);
-    let accountMap = initialiseAccounts(transactions)
-    accountMap = populateAccounts(transactions, accountMap)
+    let accountMap = initialiseAccounts(transactions);
+    accountMap = populateAccounts(transactions, accountMap);
 
-    console.log(accountMap)
+    //console.log(accountMap)
 
+    console.log('Please enter a command:');
+    let command = readline.prompt();
+    //let command = 'List Jon A'
+    //let validStart = /^List\s/;
+
+    let commandCore = command.substr(5, command.length - 5)
+
+    if (commandCore === 'All') {
+        for (let key of accountMap.keys()) {
+            let output = key + ' ' + accountMap.get(key).balance;
+            console.log(output);
+        }
+    } else if (accountMap.get(commandCore) === undefined) {
+        console.log('Invalid command or account name.');
+    } else {
+        let transacts = accountMap.get(commandCore).transacts;
+        transacts.forEach(function(transactionID) {
+            let transaction = transactions[transactionID];
+            let output = transaction[0] + ' ' + transaction[3] + ' ' + transaction [4];
+            console.log(output);
+        })
+    }
 });
 
 /*plan for the program:
