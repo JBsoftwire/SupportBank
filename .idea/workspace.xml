@@ -16,8 +16,8 @@
       <file leaf-file-name="SupportBank.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SupportBank.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="76" column="4" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="1419">
+              <caret line="95" column="3" lean-forward="false" selection-start-line="95" selection-start-column="3" selection-end-line="95" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -252,12 +252,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512469498406</updated>
       <workItem from="1512469501025" duration="10437000" />
-      <workItem from="1512480791166" duration="7124000" />
+      <workItem from="1512480791166" duration="8178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17561000" />
+    <option name="totallyTimeSpent" value="18615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4813" y="745" width="3526" height="2913" extended-state="0" />
@@ -271,7 +271,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -309,12 +309,6 @@
           <url>file://$PROJECT_DIR$/test.js</url>
           <line>6</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SupportBank.js</url>
-          <line>28</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="5" />
@@ -371,8 +365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SupportBank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="76" column="4" lean-forward="true" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="1419">
+          <caret line="95" column="3" lean-forward="false" selection-start-line="95" selection-start-column="3" selection-end-line="95" selection-end-column="3" />
           <folding />
         </state>
       </provider>
