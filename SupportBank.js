@@ -1,12 +1,20 @@
 let fs = require('fs');
 //let parse = require('csv-parse');
 
-function splitlines(data) {
-    data.split('$') //needs multiline flag to be set to true - how does that work?
+function splitLines(data) {//splits the raw csv input into an array of lines
+    return data.split('\n');
 }
 
-function readline(line) {
-    line.split([','])
+function readLine(line) {//splits a line into an array of column entries
+    return line.split([',']);
+}
+
+function processLines(lines) {//the function to process each line
+    let transactions = [];
+    for (let i = 1; i < lines.length; i++) {//iterate over lines, starting from the second line to avoid header row
+        transactions[i-1] = readLine(lines[i]);
+    }
+    return transactions
 }
 
 fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
@@ -25,6 +33,11 @@ fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
             this.amount = amount;
         }
     }
+
+    let lines = splitLines(data);
+    let transactions = processLines(lines);
+
+    console.log(transactions);
 
 });
 
