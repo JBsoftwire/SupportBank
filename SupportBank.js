@@ -56,7 +56,6 @@ function populateAccounts(transactions, accountMap) {//populates the database
 function populateTransacts(transactions, accountMap, accountTransacts) {
         /*Add the transaction number to the lists of transactions for the accounts.
         The transaction number is the index of the transaction in the 'transactions' list*/
-         */
     for (let i = 0; i < transactions.length; i++) {
         let source = transactions[i][1];
         let target = transactions[i][2];
