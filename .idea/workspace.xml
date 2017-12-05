@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3dd2297a-3089-464d-b79e-b142d0793ba2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/SupportBank.js" afterPath="$PROJECT_DIR$/SupportBank.js" />
-      <change beforePath="$PROJECT_DIR$/test.js" afterPath="$PROJECT_DIR$/test.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="SupportBank.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SupportBank.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1400">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="1539">
+              <caret line="55" column="102" lean-forward="false" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -37,8 +36,8 @@
       <file leaf-file-name="Transactions2014.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Transactions2014.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="40">
+              <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -251,12 +250,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512469498406</updated>
-      <workItem from="1512469501025" duration="5900000" />
+      <workItem from="1512469501025" duration="7302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5900000" />
+    <option name="totallyTimeSpent" value="7302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4813" y="745" width="3526" height="2913" extended-state="0" />
@@ -319,16 +318,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Transactions2014.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="40">
+          <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SupportBank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="1539">
+          <caret line="55" column="102" lean-forward="false" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="102" />
           <folding />
         </state>
       </provider>

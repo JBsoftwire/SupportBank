@@ -24,7 +24,7 @@ fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
         }
     }
 
-    class Transaction {
+    class Transaction {//do I actually need this?
         constructor(date, source, target, narrative, amount) {
             this.date = date;
             this.source = source;
@@ -36,8 +36,27 @@ fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
 
     let lines = splitLines(data);
     let transactions = processLines(lines);
+    let accountMap = new Map();
+    let maxAccountNum = 0;
+    let accounts = []
 
-    console.log(transactions);
+    for (let i = 0; i < transactions.length; i++) {
+        let source = transactions[i][1];
+        let target = transactions[i][2];
+        let value = parseFloat(transactions[i][3]);
+        if(accountMap.get(source) === undefined) { //if new source name encountered, creates new account for them
+            accountMap.set(source, maxAccountNum);
+            maxAccountNum++;
+        }
+        if(accountMap.get(target) === undefined) { //if new target name encountered, creates new account for them
+            accountMap.set(target, maxAccountNum);
+            maxAccountNum++;
+        }
+        accounts[accountMap.get(source)] -= value; //decrements source balance by value of transaction
+        accounts[accountMap.get(target)] += value; //increments target balance by value of transaction
+    }
+
+    console.log(transactions[1][1]);
 
 });
 
