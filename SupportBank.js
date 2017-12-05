@@ -1,5 +1,11 @@
 let fs = require('fs');
 //let parse = require('csv-parse');
+class Account {
+    constructor(balance, transacts) {
+        this.balance = balance;
+        this.transacts = transacts;
+    }
+}
 
 function splitLines(data) {//splits the raw csv input into an array of lines
     return data.split('\n');
@@ -11,46 +17,38 @@ function readLine(line) {//splits a line into an array of column entries
 
 function processLines(lines) {//the function to process each line
     let transactions = [];
-    for (let i = 1; i < lines.length; i++) {//iterate over lines, starting from the second line to avoid header row
+    for (let i = 1; i < lines.length-1; i++) {//iterate over lines, starting from the second line to avoid header row
         transactions[i-1] = readLine(lines[i]);
     }
     return transactions
 }
 
-function initialiseAccounts(transactions) {//creates empty databases for the accounts, based on the transaction data
+function initialiseAccounts(transactions) {//creates empty database for the accounts, based on the transaction data
     let accountMap = new Map();
-    let balances = []
-    let accountTransacts = [];
-    let maxAccountNum = 0;
-
     for (let i = 0; i < transactions.length; i++) {
         let source = transactions[i][1];
         let target = transactions[i][2];
         if (accountMap.get(source) === undefined) { //if new source name encountered, creates new account for them
-            accountMap.set(source, maxAccountNum);
-            balances[accountMap.get(source)] = 0; //initialises the account's balance at zero
-            accountTransacts[accountMap.get(source)] = []; //creates an empty transaction list for that account
-            maxAccountNum++;
+            accountMap.set(source, new Account(0, []));
         }
         if (accountMap.get(target) === undefined) { //if new target name encountered, creates new account for them
-            accountMap.set(target, maxAccountNum);
-            balances[accountMap.get(source)] = 0; //initialises the account's balance at zero
-            accountTransacts[accountMap.get(target)] = []; //creates an empty transaction list for that account
-            maxAccountNum++;
+            accountMap.set(target, new Account(0, []));
         }
     }
-    return [accountMap, balances, accountTransacts]
+    return accountMap
 }
 
-function populateBalances(transactions, accountMap, balances) {//changes the account balances for each transaction
+function populateAccounts(transactions, accountMap) {//populates the database
     for (let i = 0; i < transactions.length; i++) {
         let source = transactions[i][1];
         let target = transactions[i][2];
-        let value = parseFloat(transactions[i][3]);
-        balances[accountMap.get(source)] -= value; //decrements source balance by value of transaction
-        balances[accountMap.get(target)] += value; //increments target balance by value of transaction
+        let value = parseFloat(transactions[i][4]);
+        accountMap.get(source).balance -= value;
+        accountMap.get(source).transacts[accountMap.get(source).transacts.length] = i
+        accountMap.get(target).balance += value;
+        accountMap.get(target).transacts[accountMap.get(target).transacts.length] = i
     }
-    return balances
+    return accountMap
 }
 
 function populateTransacts(transactions, accountMap, accountTransacts) {
@@ -65,21 +63,13 @@ function populateTransacts(transactions, accountMap, accountTransacts) {
 }
 
 fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
+
     let lines = splitLines(data);
     let transactions = processLines(lines);
-
-    let initials = initialiseAccounts(transactions)
-    let accountMap = initials[0];
-    let balances = initials[1];
-    let accountTransacts = initials[1]
-    balances = populateBalances(transactions, accountMap, balances)
-    accountTransacts = populateTransacts(transactions, accountMap, accountTransacts)
+    let accountMap = initialiseAccounts(transactions)
+    accountMap = populateAccounts(transactions, accountMap)
 
     console.log(accountMap)
-    console.log(balances)
-    console.log(accountTransacts)
-
-    //console.log(transactions[1][1]);
 
 });
 
@@ -139,3 +129,24 @@ for (let i = 0; i < transactions.length; i++) {
     // these two lines add the transaction number to the list of transactions for each involved account
 }
 */
+
+//let balances = []
+//let accountTransacts = [];
+//let maxAccountNum = 0;
+
+//balances[accountMap.get(source)] = 0; //initialises the account's balance at zero
+//accountTransacts[accountMap.get(source)] = []; //creates an empty transaction list for that account
+//maxAccountNum++;
+
+// balances[accountMap.get(source)] = 0; //initialises the account's balance at zero
+// accountTransacts[accountMap.get(target)] = []; //creates an empty transaction list for that account
+// maxAccountNum++;
+
+//balances[accountMap.get(source)] -= value; //decrements source balance by value of transaction
+//balances[accountMap.get(target)] += value; //increments target balance by value of transaction
+
+//let accountMap = initials[0];
+//let balances = initials[1];
+//let accountTransacts = initials[1]
+//balances = populateBalances(transactions, accountMap, balances)
+//accountTransacts = populateTransacts(transactions, accountMap, accountTransacts)

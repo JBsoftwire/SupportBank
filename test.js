@@ -1,10 +1,10 @@
 //let fs = require('fs');
-
+/*
 let array = []
 array[0] += 1
 console.log(array[0])
-
-console.log('hello world')
+*/
+console.log('hello world');
 
 /*fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
     if(err) {
