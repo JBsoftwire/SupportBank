@@ -11,12 +11,15 @@ log4js.configure({
     }
 });
 const logger = log4js.getLogger('SupportBank.log');
-// logger.trace('Trace');
+logger.trace('Initiating program');
 // logger.debug('Debug');
 // logger.info('Information');
 // logger.warn('Warning');
 // logger.error('Error');
 // logger.fatal('Fatal error')
+
+
+// CLASSES
 
 class Account {
     constructor(balance = 0, transactions = []) {
@@ -34,21 +37,32 @@ class Transaction {
     }
 }
 
+
+// INPUT functions
+
 function splitLines(data) {//splits the raw csv input into an array of lines
-    return data.split('\n');
+    try {
+        return data.split('\n');
+    }
+    catch (splitLines) {logger.fatal('failed to separate raw csv into lines')}
 }
 function readLine(line) {//splits a line into an array of column entries
-    return line.split([',']);
-}
-function processLines(lines) {//the function to process each line
-    let transactions = [];
-    for (let i = 1; i < lines.length-1; i++) {//iterate over lines, starting from the second line to avoid header row
-        transactions[i-1] = readLine(lines[i]); //this could be replaced with a transaction class for more clarity later
+    try {
+        return line.split([',']);
     }
-    return transactions
+    catch (readLine) {logger.fatal('failed to separate csv lines by commas')}
+}
+function processLines(lines) {//the function to process each line (save the header) into
+    try {
+        return lines.slice(1, -1).map(readLine) //cut off header line and blank final line of raw data
+    }
+    catch (processLines) {logger.fatal('failed to process line-split csv data')}
 }
 function processTransaction(transaction) {
-    return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], transaction[4])
+    try {
+        return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], transaction[4])
+    }
+    catch (processTransaction) {logger.fatal('transaction data unreadable')}
 }
 function initialiseAccounts(transactions) {//creates empty database for the accounts, based on the transaction data
     let accountMap = new Map();
@@ -75,34 +89,45 @@ function populateAccounts(transactions, accountMap) {//populates the database
     return accountMap
 }
 
-// function takeCommand() {
-//     console.log('Please enter a command:');
-//     let command = readline.prompt();
-//     let commandType;
-//     if (command.substr(0,5) === 'List ') {
-//         //test if it starts with 'List ' and if so, do this
-//         let command = command.substr(5, command.length - 5);
-//         commandType = 'list';
-//     } else if (command.substr(0,12) === 'Import File ') {
-//         //otherwise, test if it starts with 'Import File' and if so, do this
-//         let command = command.substr(12, command.length - 12);
-//         commandType = 'file';
-//     } else {
-//         //error case
-//         command = false;
-//         commandType = 'error';
-//     }
-//     return [command, commandtype]
-// }
+
+// OUTPUT functions
+
+function displayAll(accountMap) {
+
+    for (let key of accountMap.keys()) {
+        let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
+        console.log(output); //prints name and balance on new line
+    }
+}
+
+function displayAccount(name, accountMap, transactions) {
+    let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
+    accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
+        let transaction = transactions[transactionID]; // pick out the specific transaction
+        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative;
+        // suture together transaction description
+        // and then add value based on if debit or credit
+        if (transaction.source === name) {
+            output += ' ' + -transaction.value;
+        } else {
+            output += ' ' + transaction.value;
+        }
+        console.log(output)
+    })
+}
+
+// main code
+
+let filename = 'Transactions2014.csv';
+//let filename = 'DodgyTransactions2015.csv';
 
 
-// let controls = takeCommand();
-// let command = controls[0];
-// let commandType = controls[1];
-// if commandType = 'file'
-
-//fs.readFile('DodgyTransactions2015.csv', 'utf8',function(err,data){
-fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
+fs.readFile(filename, 'utf8', function(err,data) {
+    if (data == undefined) {
+        logger.fatal('No data found at ' + filename);
+    } else  {
+        logger.info('loaded file: ' + filename);
+    }
 
     let lines = splitLines(data); //splits the raw text into a list of lines
     let transactiondata = processLines(lines); //splits each line into a list of columns
@@ -123,41 +148,9 @@ fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
     } else {
         displayAccount(commandCore, accountMap, transactions)
     }
-
-    // if (commandCore === 'All') {
-    //     for (let key of accountMap.keys()) {
-    //         let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
-    //         console.log(output); //prints name and balance on new line
-    //     }
-    // } else if (accountMap.get(commandCore) === undefined) {
-    //     console.log('Invalid command or account name.'); //if command isn't All or a valid account name, error message
-    // } else {
-    //     let transacts = accountMap.get(commandCore).transactions; //get list of transaction #s for the account name
-    //     transacts.forEach(function(transactionID) { //iterate over each transaction #
-    //         let transaction = transactions[transactionID]; //get the list of properties for the specific transaction
-    //         let output = transaction.date + ' ' + transaction.narrative + ' ' + transaction.value; //suture them together for output
-    //         console.log(output);
-    //     })
-    // }
 });
 
-function displayAll(accountMap) {
 
-    for (let key of accountMap.keys()) {
-        let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
-        console.log(output); //prints name and balance on new line
-    }
-}
-
-function displayAccount(name, accountMap, transactions) {
-    let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
-    accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
-        let transaction = transactions[transactionID]; // pick out the specific transaction
-        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative + ' ' + transaction.value;
-        //suture together transaction description
-        console.log(output)
-    })
-}
 
 function importDataCSV(filename) {
     fs.readFile(filename, 'utf8',function(err,data){
@@ -218,3 +211,51 @@ function importDataJSON(filename) {
 //     }
 //     return accountTransactions
 // }
+
+// if (commandCore === 'All') {
+//     for (let key of accountMap.keys()) {
+//         let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
+//         console.log(output); //prints name and balance on new line
+//     }
+// } else if (accountMap.get(commandCore) === undefined) {
+//     console.log('Invalid command or account name.'); //if command isn't All or a valid account name, error message
+// } else {
+//     let transacts = accountMap.get(commandCore).transactions; //get list of transaction #s for the account name
+//     transacts.forEach(function(transactionID) { //iterate over each transaction #
+//         let transaction = transactions[transactionID]; //get the list of properties for the specific transaction
+//         let output = transaction.date + ' ' + transaction.narrative + ' ' + transaction.value; //suture them together for output
+//         console.log(output);
+//     })
+// }
+
+// function takeCommand() {
+//     console.log('Please enter a command:');
+//     let command = readline.prompt();
+//     let commandType;
+//     if (command.substr(0,5) === 'List ') {
+//         //test if it starts with 'List ' and if so, do this
+//         let command = command.substr(5, command.length - 5);
+//         commandType = 'list';
+//     } else if (command.substr(0,12) === 'Import File ') {
+//         //otherwise, test if it starts with 'Import File' and if so, do this
+//         let command = command.substr(12, command.length - 12);
+//         commandType = 'file';
+//     } else {
+//         //error case
+//         command = false;
+//         commandType = 'error';
+//     }
+//     return [command, commandtype]
+// }
+
+
+// let controls = takeCommand();
+// let command = controls[0];
+// let commandType = controls[1];
+// if commandType = 'file'
+
+// let transactions = [];
+// for (let i = 1; i < lines.length - 1; i++) {//iterate over lines, starting from the second line to avoid header row
+//     transactions[i - 1] = readLine(lines[i]); //this could be replaced with a transaction class for more clarity later
+// }
+// return transactions
