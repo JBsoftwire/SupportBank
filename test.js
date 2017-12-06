@@ -1,6 +1,6 @@
 let fs = require('fs');
 
-console.log('hello world');
+//console.log('hello world');
 
 /*
 fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
@@ -23,6 +23,16 @@ fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
     console.log(transactions[1])
     console.log(transactions[1]['ToAccount'])
 });
+
+fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
+    let transactions = JSON.parse(data)
+    console.log(transactions[1])
+    console.log(transactions[1]['ToAccount'])
+});
+
+if (1===1 & 2===2){
+    console.log('hello world')
+}
 
 // const log4js = require('log4js');
 // const logger = log4js.getLogger('debug.log');
