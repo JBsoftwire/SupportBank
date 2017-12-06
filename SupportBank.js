@@ -54,13 +54,26 @@ function readLine(line) {//splits a line into an array of column entries
 }
 function processLines(lines) {//the function to process each line (save the header) into
     try {
-        return lines.slice(1, -1).map(readLine) //cut off header line and blank final line of raw data
+        let output = [];
+        let lineID = 1;
+        lines.forEach(function(line) {
+            if (line != '') {
+                output.push(readLine(line))//create new array with only non-blank lines
+            } else {logger.warn('warning: blank input on csv file line ' + lineID)}
+            lineID++
+        })
+        return output.slice(1) //cut off header and return
+        //return lines.slice(1, -1).map(readLine) //cut off header line and blank final line of raw data
     }
     catch (processLines) {logger.fatal('failed to process line-split csv data')}
 }
-function processTransaction(transaction) {
+function processTransaction(transaction, i) {
     try {
-        return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], transaction[4])
+        // transaction.forEach(function(element) {if (element == undefined) {logger.warn('warning: data missing')} })
+        const datePattern = /\d\d\/\d\d\/\d\d\d\d/;
+        if (!datePattern.test(transaction[0])) {logger.warn('warning: invalid date format on data entry ' + i)};
+        if (isNaN(parseFloat(transaction[4]))) {logger.warn('warning: invalid value format on data entry ' + i)};
+        return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], parseFloat(transaction[4]))
     }
     catch (processTransaction) {logger.fatal('transaction data unreadable')}
 }
@@ -80,15 +93,14 @@ function populateAccounts(transactions, accountMap) {//populates the database
     for (let i = 0; i < transactions.length; i++) {
         let source = transactions[i].source;
         let target = transactions[i].target;
-        let value = parseFloat(transactions[i].value);
+        let value = transactions[i].value;
         accountMap.get(source).balance -= value;
-        accountMap.get(source).transactions[accountMap.get(source).transactions.length] = i;
+        accountMap.get(source).transactions.push(i);
         accountMap.get(target).balance += value;
-        accountMap.get(target).transactions[accountMap.get(target).transactions.length] = i;
+        accountMap.get(target).transactions.push(i);
     }
     return accountMap
 }
-
 
 // OUTPUT functions
 
@@ -118,8 +130,8 @@ function displayAccount(name, accountMap, transactions) {
 
 // main code
 
-let filename = 'Transactions2014.csv';
-//let filename = 'DodgyTransactions2015.csv';
+//let filename = 'Transactions2014.csv';
+let filename = 'DodgyTransactions2015.csv';
 
 
 fs.readFile(filename, 'utf8', function(err,data) {
@@ -131,7 +143,11 @@ fs.readFile(filename, 'utf8', function(err,data) {
 
     let lines = splitLines(data); //splits the raw text into a list of lines
     let transactiondata = processLines(lines); //splits each line into a list of columns
-    let transactions = transactiondata.map(processTransaction);
+    let transactions = []
+    for (let i = 0; i < transactiondata.length; i++) {
+        transactions.push(processTransaction(transactiondata[i], i+1))
+    }
+    //let transactions = transactiondata.map(processTransaction);
     let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
     accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
 
@@ -151,24 +167,23 @@ fs.readFile(filename, 'utf8', function(err,data) {
 });
 
 
+// function importDataCSV(filename) {
+//     fs.readFile(filename, 'utf8',function(err,data){
+//
+//         let lines = splitLines(data); //splits the raw text into a list of lines
+//         let transactiondata = processLines(lines); //splits each line into a list of columns
+//
+//         let transactions = transactiondata.map(processTransaction);
+//         let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
+//         accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
+//
+//     return [accountMap, transactions]
+//     })
+// }
 
-function importDataCSV(filename) {
-    fs.readFile(filename, 'utf8',function(err,data){
-
-        let lines = splitLines(data); //splits the raw text into a list of lines
-        let transactiondata = processLines(lines); //splits each line into a list of columns
-
-        let transactions = transactiondata.map(processTransaction);
-        let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
-        accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
-
-    return [accountMap, transactions]
-    })
-}
-
-function importDataJSON(filename) {
-    return [accountMap, transactions]
-}
+// function importDataJSON(filename) {
+//     return [accountMap, transactions]
+// }
 
 //CODE ARCHIVE
 

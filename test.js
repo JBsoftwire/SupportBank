@@ -35,3 +35,4 @@ log4js.configure({
 });
 
 console.log(Object.getOwnPropertyNames(logger));
+console.log(isNaN(parseFloat('A Cheeseburger')));

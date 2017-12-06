@@ -1,17 +1,283 @@
-[2017-12-06T13:37:48.023] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
-[2017-12-06T13:37:55.730] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
-[2017-12-06T13:38:09.486] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
-[2017-12-06T13:38:18.060] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
-[2017-12-06T13:38:55.298] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T13:46:45.314] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T13:47:31.254] [INFO] SupportBank.log - loaded file: Transactions20140.csv
-[2017-12-06T13:51:33.668] [INFO] SupportBank.log - loaded file: Transactions20140.csv
-[2017-12-06T13:52:50.995] [INFO] SupportBank.log - loaded file: Transactions20140.csv
-[2017-12-06T13:53:06.951] [INFO] SupportBank.log - loaded file: Transactions20140.csv
-[2017-12-06T13:54:44.449] [INFO] SupportBank.log - loaded file: Transactions20140.csv
-[2017-12-06T13:55:04.539] [FATAL] SupportBank.log - No data found at Transactions20140.csv
-[2017-12-06T14:06:32.976] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T14:08:17.826] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T14:10:52.752] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T14:10:58.113] [INFO] SupportBank.log - loaded file: Transactions2014.csv
-[2017-12-06T14:12:43.172] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:43:58.745] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:44:20.205] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:45:05.626] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:45:05.630] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.631] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.632] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.633] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.638] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.639] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.640] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.641] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.642] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.643] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.644] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.645] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.646] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.647] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.648] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.649] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.650] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.651] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.652] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.653] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.654] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.654] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.655] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.657] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.657] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.658] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.659] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.660] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.661] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.662] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.663] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.664] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.665] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.666] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.667] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.668] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.670] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.671] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.672] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.673] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.674] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.675] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.676] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.677] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.678] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.679] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.680] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.681] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.682] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.683] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.684] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.685] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.687] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.688] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.689] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.690] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.692] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.693] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.694] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.695] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.696] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.697] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.698] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.699] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.700] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.701] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.702] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.703] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.704] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.705] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.706] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.707] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.708] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.709] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.710] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.711] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.712] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.713] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.714] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.715] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.716] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.717] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.718] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.719] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.720] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.721] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.722] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.723] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.724] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.726] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.727] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.728] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.730] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.731] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.732] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.733] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.734] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.735] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.736] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.737] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.738] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.740] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.741] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.742] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.743] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.744] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.745] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.746] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.747] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.748] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.749] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.751] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.752] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.754] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.755] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.756] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.757] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.758] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.759] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.760] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.762] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.763] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.764] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.765] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.766] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.767] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.768] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.769] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.770] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.771] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.772] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.774] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.775] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.776] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.777] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.778] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.779] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.780] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.781] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.782] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.783] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.784] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.785] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.786] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.787] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.788] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.789] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:05.790] [FATAL] SupportBank.log - transaction data unreadable
+[2017-12-06T14:45:23.158] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:45:46.482] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:46:01.668] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-06T14:46:15.484] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:46:15.488] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:46:15.490] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:46:47.228] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:46:47.232] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:46:47.234] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:51:29.089] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:51:29.094] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:51:29.095] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:51:29.096] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:51:29.097] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:53:59.059] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:53:59.063] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:53:59.064] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:53:59.066] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:53:59.067] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:54:07.220] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:54:07.224] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:54:07.226] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:54:07.227] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:54:07.228] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:54:13.237] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:54:13.241] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:54:13.242] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:54:13.244] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:54:13.245] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.748] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:58:11.753] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.755] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:11.756] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.757] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.758] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.759] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.760] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.762] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.763] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.764] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.764] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.765] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.766] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.767] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.769] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.770] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.771] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.772] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.773] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.774] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.775] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.776] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.777] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.778] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.779] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.780] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.781] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.782] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.783] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.785] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.786] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.787] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.787] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.789] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.790] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.791] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.792] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.793] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.794] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.795] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.796] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.797] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.798] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.799] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.800] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.801] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.802] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.803] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.804] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.805] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.806] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.807] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.808] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:11.809] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:44.282] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:58:44.286] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:44.287] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:44.289] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:44.290] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:50.983] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:58:50.988] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:58:50.989] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:50.990] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:58:50.991] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T14:59:16.939] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T14:59:16.944] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T14:59:16.945] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:00:37.727] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:00:37.731] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:37.733] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:37.735] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:00:37.737] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:00:42.506] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:00:42.511] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:42.513] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:42.514] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:00:42.516] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:00:46.458] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:00:46.462] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:46.463] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:46.465] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:00:46.466] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:00:52.151] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:00:52.155] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:52.156] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:00:52.158] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:00:52.159] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:04:49.637] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:04:49.641] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:04:49.642] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:04:49.644] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:04:49.645] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:04:54.471] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:04:54.474] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:04:54.476] [WARN] SupportBank.log - warning: blank input line
+[2017-12-06T15:04:54.477] [WARN] SupportBank.log - warning: invalid value format
+[2017-12-06T15:04:54.478] [WARN] SupportBank.log - warning: invalid date format
+[2017-12-06T15:10:19.979] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:10:19.983] [WARN] SupportBank.log - warning: blank input on csv file line 1
+[2017-12-06T15:10:19.984] [WARN] SupportBank.log - warning: blank input on csv file line 54
+[2017-12-06T15:10:19.986] [WARN] SupportBank.log - warning: invalid value format on data entry 27
+[2017-12-06T15:10:19.987] [WARN] SupportBank.log - warning: invalid date format on data entry 51
