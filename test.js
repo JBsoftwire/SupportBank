@@ -18,7 +18,20 @@ fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
 });
 */
 
-fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
-    let transactions = JSON.parse(data)
-    console.log(transactions)
+// fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
+//     let transactions = JSON.parse(data)
+//     console.log(transactions)
+// });
+
+const log4js = require('log4js');
+const logger = log4js.getLogger('debug.log');
+log4js.configure({
+    appenders: {
+        file: { type: 'fileSync', filename: 'logs/debug.log' }
+    },
+    categories: {
+        default: { appenders: ['file'], level: 'debug'}
+    }
 });
+
+console.log(Object.getOwnPropertyNames(logger));
