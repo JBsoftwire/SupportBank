@@ -117,21 +117,47 @@ fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
     // Valid commands are of the form 'List [X]' where [X] is either 'All' or an account name. Only [X] need be kept.
 
     if (commandCore === 'All') {
-        for (let key of accountMap.keys()) {
-            let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
-            console.log(output); //prints name and balance on new line
-        }
+        displayAll(accountMap)
     } else if (accountMap.get(commandCore) === undefined) {
         console.log('Invalid command or account name.'); //if command isn't All or a valid account name, error message
     } else {
-        let transacts = accountMap.get(commandCore).transactions; //get list of transaction #s for the account name
-        transacts.forEach(function(transactionID) { //iterate over each transaction #
-            let transaction = transactions[transactionID]; //get the list of properties for the specific transaction
-            let output = transaction.date + ' ' + transaction.narrative + ' ' + transaction.value; //suture them together for output
-            console.log(output);
-        })
+        displayAccount(commandCore, accountMap, transactions)
     }
+
+    // if (commandCore === 'All') {
+    //     for (let key of accountMap.keys()) {
+    //         let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
+    //         console.log(output); //prints name and balance on new line
+    //     }
+    // } else if (accountMap.get(commandCore) === undefined) {
+    //     console.log('Invalid command or account name.'); //if command isn't All or a valid account name, error message
+    // } else {
+    //     let transacts = accountMap.get(commandCore).transactions; //get list of transaction #s for the account name
+    //     transacts.forEach(function(transactionID) { //iterate over each transaction #
+    //         let transaction = transactions[transactionID]; //get the list of properties for the specific transaction
+    //         let output = transaction.date + ' ' + transaction.narrative + ' ' + transaction.value; //suture them together for output
+    //         console.log(output);
+    //     })
+    // }
 });
+
+function displayAll(accountMap) {
+
+    for (let key of accountMap.keys()) {
+        let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
+        console.log(output); //prints name and balance on new line
+    }
+}
+
+function displayAccount(name, accountMap, transactions) {
+    let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
+    accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
+        let transaction = transactions[transactionID]; // pick out the specific transaction
+        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative + ' ' + transaction.value;
+        //suture together transaction description
+        console.log(output)
+    })
+}
 
 function importDataCSV(filename) {
     fs.readFile(filename, 'utf8',function(err,data){
