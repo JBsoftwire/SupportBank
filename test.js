@@ -1,12 +1,9 @@
-//let fs = require('fs');
-/*
-let array = []
-array[0] += 1
-console.log(array[0])
-*/
+let fs = require('fs');
+
 console.log('hello world');
 
-/*fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
+/*
+fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
     if(err) {
         return console.log(err);
     }
@@ -18,4 +15,10 @@ console.log('hello world');
     for (let i = 0; i < lines.length; i++) {
         console.log(lines[i]);
     }
-});*/
+});
+*/
+
+fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
+    let transactions = JSON.parse(data)
+    console.log(transactions)
+});

@@ -1,5 +1,16 @@
 const fs = require('fs');
-const readline = require('readline-sync')
+const readline = require('readline-sync');
+
+const log4js = require('log4js');
+log4js.configure({
+    appenders: {
+        file: { type: 'fileSync', filename: 'logs/debug.log' }
+    },
+    categories: {
+        default: { appenders: ['file'], level: 'debug'}
+    }
+});
+const logger = log4js.getLogger('debug');
 
 //let parse = require('csv-parse');
 class Account {
@@ -8,6 +19,11 @@ class Account {
         this.transacts = transacts;
     }
 }
+/*
+class Transaction {
+    constructor(date, source, target)
+}
+*/
 
 function splitLines(data) {//splits the raw csv input into an array of lines
     return data.split('\n');
@@ -65,17 +81,50 @@ function populateTransacts(transactions, accountMap, accountTransacts) {
     return accountTransacts
 }
 
+
+/*
+function takeCommand() {
+    console.log('Please enter a command:');
+    let command = readline.prompt();
+    let commandType;
+    if (command.substr(0,5) === 'List ') {
+        //test if it starts with 'List ' and if so, do this
+        let command = command.substr(5, command.length - 5);
+        commandType = 'list';
+    } else if (command.substr(0,12) === 'Import File ') {
+        //otherwise, test if it starts with 'Import File' and if so, do this
+        let command = command.substr(12, command.length - 12);
+        commandType = 'file';
+    } else {
+        //error case
+        command = false;
+        commandType = 'error';
+    }
+    return [command, commandtype]
+}
+*/
+/*
+let controls = takeCommand();
+let command = controls[0];
+let commandType = controls[1];
+if commandType = 'file'
+*/
+
 fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
+//fs.readFile('DodgyTransactions2015.csv', 'utf8',function(err,data){
 
     let lines = splitLines(data); //splits the raw text into a list of lines
     let transactions = processLines(lines); //splits each line into a list of columns
     let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
     accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
 
-    console.log('Please enter a command:'); //takes in command from user
-    let command = readline.prompt();
-    let commandCore = command.substr(5, command.length - 5) //extracts the variable part of the command
+
+    console.log('Please enter a command:'); //requests command from user
+    let command = readline.prompt(); //takes in command from user
+    let commandCore = command.substr(5, command.length - 5); //extracts the variable part of the command
     // Valid commands are of the form 'List [X]' where [X] is either 'All' or an account name. Only [X] need be kept.
+
+
 
     if (commandCore === 'All') {
         for (let key of accountMap.keys()) {
@@ -92,4 +141,15 @@ fs.readFile('Transactions2014.csv', 'utf8',function(err,data){
             console.log(output);
         })
     }
+    //let no = yes
 });
+/*
+function importDataCSV('filename') {
+
+    return [accountMap, transactions]
+}
+
+function importDataJSON('filename') {
+    return [accountMap, transactions]
+}
+*/
