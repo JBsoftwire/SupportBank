@@ -281,3 +281,23 @@
 [2017-12-06T15:10:19.984] [WARN] SupportBank.log - warning: blank input on csv file line 54
 [2017-12-06T15:10:19.986] [WARN] SupportBank.log - warning: invalid value format on data entry 27
 [2017-12-06T15:10:19.987] [WARN] SupportBank.log - warning: invalid date format on data entry 51
+[2017-12-06T15:15:17.379] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:15:17.383] [WARN] SupportBank.log - warning: blank input on csv file line 1
+[2017-12-06T15:15:17.385] [WARN] SupportBank.log - warning: blank input on csv file line 54
+[2017-12-06T15:15:17.386] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-06T15:15:17.390] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-06T15:15:27.378] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:15:27.382] [WARN] SupportBank.log - warning: blank input on csv file line 1
+[2017-12-06T15:15:27.384] [WARN] SupportBank.log - warning: blank input on csv file line 54
+[2017-12-06T15:15:27.385] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-06T15:15:27.388] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-06T15:22:16.664] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:22:16.668] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-06T15:22:16.669] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-06T15:22:16.671] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-06T15:22:16.674] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-06T15:39:19.296] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-06T15:39:19.300] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-06T15:39:19.301] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-06T15:39:19.303] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-06T15:39:19.306] [WARN] SupportBank.log - invalid date format on data entry 51

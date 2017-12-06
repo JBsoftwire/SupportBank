@@ -59,7 +59,7 @@ function processLines(lines) {//the function to process each line (save the head
         lines.forEach(function(line) {
             if (line != '') {
                 output.push(readLine(line))//create new array with only non-blank lines
-            } else {logger.warn('warning: blank input on csv file line ' + lineID)}
+            } else {logger.warn('blank input on csv file line ' + lineID)}
             lineID++
         })
         return output.slice(1) //cut off header and return
@@ -71,8 +71,16 @@ function processTransaction(transaction, i) {
     try {
         // transaction.forEach(function(element) {if (element == undefined) {logger.warn('warning: data missing')} })
         const datePattern = /\d\d\/\d\d\/\d\d\d\d/;
-        if (!datePattern.test(transaction[0])) {logger.warn('warning: invalid date format on data entry ' + i)};
-        if (isNaN(parseFloat(transaction[4]))) {logger.warn('warning: invalid value format on data entry ' + i)};
+        if (!datePattern.test(transaction[0])) {
+            logger.warn('invalid date format on data entry ' + i);
+            console.log('Warning: invalid date format on data entry ' + i);
+        };
+        if (isNaN(parseFloat(transaction[4]))) {
+            logger.warn('invalid value format on data entry ' + i);
+            console.log('Warning: invalid value format on data entry ' + i);
+            console.log('Value will be interpreted as 0.');
+            transaction[4] = 0;
+        };
         return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], parseFloat(transaction[4]))
     }
     catch (processTransaction) {logger.fatal('transaction data unreadable')}
@@ -128,33 +136,82 @@ function displayAccount(name, accountMap, transactions) {
     })
 }
 
+
+function importDataCSV(filename) {
+    fs.readFile(filename, 'utf8', function(err,data){
+        if (data === undefined) {
+            logger.fatal('No data found at ' + filename);
+        } else  {
+            logger.info('loaded file: ' + filename);
+        }
+
+        let lines = splitLines(data); // splits the raw text into a list of lines
+        let transactiondata = processLines(lines); // converts each line into a list of column entries
+        let transactions = [];
+        for (let i = 0; i < transactiondata.length; i++) { // converts lists of column entries into Transaction objects
+            transactions.push(processTransaction(transactiondata[i], i+1))
+        }
+        let accountMap = initialiseAccounts(transactions); // creates an empty Map of account names to Account class objects
+        accountMap = populateAccounts(transactions, accountMap); // populates the Account objects with appropriate values
+
+        return [accountMap, transactions]
+    })
+}
+
+function importDataJSON(filename) {
+    fs.readFile(filename, 'utf8', function(err,data) {
+        if (data === undefined) {
+            logger.fatal('No data found at ' + filename);
+        } else  {
+            logger.info('loaded file: ' + filename);
+        }
+
+        let entries = JSON.parse(data);
+        let transactions = processJSON(entries); //converts each JSON entry into a Transaction object
+        let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
+        accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
+
+        return [accountMap, transactions]
+    })
+    return [accountMap, transactions]
+}
+
+function processJSON(entries) {
+    let transactions = [];
+    entries.forEach(function(entry) { // converts each JSON entry into a Transaction object
+        let transaction = new Transaction(entry['Date'], entry['FromAccount', entry['ToAccount', entry['Narrative', entry['Amount']]]]);
+        transactions.push(transaction); // appends Transaction to the array of transactions
+    })
+    return transactions
+}
+
 // main code
 
 //let filename = 'Transactions2014.csv';
 let filename = 'DodgyTransactions2015.csv';
 
 
-fs.readFile(filename, 'utf8', function(err,data) {
+fs.readFile(filename, 'utf8', function(err, data) {
+    // if (err) throw err
     if (data == undefined) {
         logger.fatal('No data found at ' + filename);
     } else  {
         logger.info('loaded file: ' + filename);
     }
 
-    let lines = splitLines(data); //splits the raw text into a list of lines
-    let transactiondata = processLines(lines); //splits each line into a list of columns
+    let lines = splitLines(data); // splits the raw text into a list of lines
+    let transactiondata = processLines(lines); // converts each line into a list of column entries
     let transactions = []
     for (let i = 0; i < transactiondata.length; i++) {
-        transactions.push(processTransaction(transactiondata[i], i+1))
+        transactions.push(processTransaction(transactiondata[i], i+1)) // converts lists of column entries into Transaction objects
     }
-    //let transactions = transactiondata.map(processTransaction);
-    let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
-    accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
+    let accountMap = initialiseAccounts(transactions); // creates an empty Map of account names to Account class objects
+    accountMap = populateAccounts(transactions, accountMap); // populates the Account objects with appropriate values
 
     console.log('Please enter a command:'); //requests command from user
     let command = readline.prompt(); //takes in command from user
-    //let command = 'List Jon A'
-    let commandCore = command.substr(5, command.length - 5); //extracts the variable part of the command
+    // let command = 'List Jon A'
+    let commandCore = command.substr(5, command.length - 5); // extracts the variable part of the command
     // Valid commands are of the form 'List [X]' where [X] is either 'All' or an account name. Only [X] need be kept.
 
     if (commandCore === 'All') {
@@ -166,24 +223,6 @@ fs.readFile(filename, 'utf8', function(err,data) {
     }
 });
 
-
-// function importDataCSV(filename) {
-//     fs.readFile(filename, 'utf8',function(err,data){
-//
-//         let lines = splitLines(data); //splits the raw text into a list of lines
-//         let transactiondata = processLines(lines); //splits each line into a list of columns
-//
-//         let transactions = transactiondata.map(processTransaction);
-//         let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
-//         accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
-//
-//     return [accountMap, transactions]
-//     })
-// }
-
-// function importDataJSON(filename) {
-//     return [accountMap, transactions]
-// }
 
 //CODE ARCHIVE
 
@@ -274,3 +313,5 @@ fs.readFile(filename, 'utf8', function(err,data) {
 //     transactions[i - 1] = readLine(lines[i]); //this could be replaced with a transaction class for more clarity later
 // }
 // return transactions
+
+// let transactions = transactiondata.map(processTransaction);
