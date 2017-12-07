@@ -1,5 +1,7 @@
 const fs = require('fs');
 const readline = require('readline-sync');
+const xml2js = require('xml2js')
+let parser = xml2js.Parser()
 
 const log4js = require('log4js');
 log4js.configure({
@@ -38,7 +40,7 @@ class Transaction {
 }
 
 
-// INPUT functions
+// processing functions
 
 function splitLines(data) {//splits the raw csv input into an array of lines
     try {
@@ -63,7 +65,6 @@ function processLines(lines) {//the function to process each line (save the head
             lineID++
         })
         return output.slice(1) //cut off header and return
-        //return lines.slice(1, -1).map(readLine) //cut off header line and blank final line of raw data
     }
     catch (processLines) {logger.fatal('failed to process line-split csv data')}
 }
@@ -110,7 +111,32 @@ function populateAccounts(transactions, accountMap) {//populates the database
     return accountMap
 }
 
-// OUTPUT functions
+function processJSON(entries) {
+    let transactions = [];
+    entries.forEach(function(entry) { // converts each JSON entry into a Transaction object
+        let transaction = new Transaction(entry['Date'], entry['FromAccount'], entry['ToAccount'], entry['Narrative'], entry['Amount']);
+        transactions.push(transaction); // appends Transaction to the array of transactions
+    })
+    return transactions
+}
+
+function processXML(entries) {
+    let transactions = [];
+
+    // for (let i = 0, i < entries.length, i++) {
+    //     let transaction = new Transaction(entries[i]['$']['Date'], entries[i]['Parties'][????], entries[i]['Parties'][????], entries[i]['Description'], entries[i]['Value'])
+    //     transactions.push(transaction); // appends Transaction to the array of transactions
+    // }
+
+    entries.forEach(function(entry) { // converts each JSON entry into a Transaction object
+        let transaction = new Transaction(entry['$']['Date'], entry['Parties'][0]['From'][0], entry['Parties'][0]['To'][0], entry['Description'], parseFloat(entry['Value']));
+        transactions.push(transaction); // appends Transaction to the array of transactions
+    })
+
+    return transactions
+}
+
+// output functions
 
 function displayAll(accountMap) {
 
@@ -135,6 +161,8 @@ function displayAccount(name, accountMap, transactions) {
         console.log(output)
     })
 }
+
+// import functions
 
 function importDataCSV(filename) {
 
@@ -169,19 +197,26 @@ function importDataJSON(filename) {
     let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
     accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
     return [accountMap, transactions]
-
 }
 
-function processJSON(entries) {
-    let transactions = [];
-    entries.forEach(function(entry) { // converts each JSON entry into a Transaction object
-        let transaction = new Transaction(entry['Date'], entry['FromAccount'], entry['ToAccount'], entry['Narrative'], entry['Amount']);
-        transactions.push(transaction); // appends Transaction to the array of transactions
+function importDataXML(filename) {
+    let data = fs.readFileSync(filename, 'utf8')
+    if (data === undefined) {
+        logger.fatal('No data found at ' + filename);
+    } else  {
+        logger.info('loaded file: ' + filename);
+    }
+    let entries
+    parser.parseString(data, function(err, result) {
+        entries = result['TransactionList']['SupportTransaction'];
     })
-    return transactions
+    let transactions = processXML(entries);
+    let accountMap = initialiseAccounts(transactions); //creates an empty Map of account names to Account class objects
+    accountMap = populateAccounts(transactions, accountMap); //populates the Account objects with appropriate values
+    return [accountMap, transactions]
 }
 
-// new main code
+// main code
 
 let command;
 let accountMap;
@@ -192,7 +227,6 @@ do {
     console.log('Please enter command:');
     command = readline.prompt();
     if (command.substr(0,5) === 'List ' & accountMap !== undefined) {//if data has been successfully loaded, can operate on command
-        console.log('List command detected')
         let subcommand = command.substr(5, command.length - 5);
         switch (subcommand) {
             case 'All':
@@ -221,8 +255,13 @@ do {
                 accountMap = loadedData[0];
                 transactions = loadedData[1];
                 break;
+            case '.txt':
+                loadedData = importDataXML(filename);
+                accountMap = loadedData[0];
+                transactions = loadedData[1];
+                break;
             default:
-                console.log('Invalid file type, please submit data in CSV or JSON format.')
+                console.log('Invalid file type, please submit data in CSV, JSON or TXT (XML) format.')
                 break;
         }
     } else if (command !== 'Exit') {

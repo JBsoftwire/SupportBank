@@ -1,5 +1,18 @@
 let fs = require('fs');
+let xml2js = require('xml2js');
+let parser = xml2js.Parser()
+let util = require('util')
 
+let data = fs.readFileSync('Transactions2012.txt', 'utf8');
+
+let output
+parser.parseString(data, function(err, result) {
+    //console.log(util.inspect(result, false, null));
+    console.log(result['TransactionList']['SupportTransaction'][0]['$']['Date']);
+    output = result['TransactionList']['SupportTransaction'][0]['Parties'][0]['From'][0];
+})
+
+console.log(output)
 //console.log('hello world');
 
 /*
@@ -18,21 +31,18 @@ fs.readFile('Transactions2014.csv', 'utf8', function(err,data) {
 });
 */
 
-fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
-    let transactions = JSON.parse(data)
-    console.log(transactions[1])
-    console.log(transactions[1]['ToAccount'])
-});
+// fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
+//     let transactions = JSON.parse(data)
+//     console.log(transactions[1])
+//     console.log(transactions[1]['ToAccount'])
+// });
+//
+// fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
+//     let transactions = JSON.parse(data)
+//     console.log(transactions[1])
+//     console.log(transactions[1]['ToAccount'])
+// });
 
-fs.readFile('Transactions2013.json', 'utf8', function(err,data) {
-    let transactions = JSON.parse(data)
-    console.log(transactions[1])
-    console.log(transactions[1]['ToAccount'])
-});
-
-if (1===1 & 2===2){
-    console.log('hello world')
-}
 
 // const log4js = require('log4js');
 // const logger = log4js.getLogger('debug.log');
