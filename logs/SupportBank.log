@@ -1788,3 +1788,5 @@
 [2017-12-07T11:26:37.743] [INFO] SupportBank.log - loaded file: Transactions2013.json
 [2017-12-07T11:28:30.243] [DEBUG] SupportBank.log - Entered XML reader
 [2017-12-07T11:28:30.247] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T11:33:09.078] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T11:33:09.082] [INFO] SupportBank.log - loaded file: Transactions2012.txt

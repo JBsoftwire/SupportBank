@@ -83,25 +83,19 @@ function dateParse(string) { //parses dates in DD/MM/YYYY, ISO8601, or MSDate fo
         let chunks = string.split('/');
         chunks.reverse();
         string = chunks[0]+'-'+chunks[1]+'-'+chunks[2];
-        date = moment(string).format('ll');
+        date = moment(string);//.format('ll');
     } else if (pattern2.test(string)) {
-        date = moment(string).format('ll');
+        date = moment(string);//.format('ll');
     } else if (pattern3.test(string)) {
-        date = moment.fromOADate(string).format('ll');
+        date = moment.fromOADate(string);//.format('ll');
     } else {
         date = 'ERROR'
     }
-    date = date.substring(0, )
-    return date
+    return date //date returned as 'moment' object, parsed into legible format in displayAccount function
 }
 
 function processTransaction(transaction, i) { // this function converts a transaction converted from a csv string to a Transaction object
     try {
-        // const datePattern = /\d\d\/\d\d\/\d\d\d\d/;
-        // if (!datePattern.test(transaction[0])) {
-        //     logger.warn('irregular date format on data entry ' + i);
-        //     console.log('Warning: irregular date format on data entry ' + i);
-        // };
         if (dateParse(transaction[0]) === 'ERROR') {
             logger.warn('invalid date format on data entry ' + i);
             console.log('Warning: invalid date format on data entry ' + i);
@@ -251,8 +245,9 @@ function displayAccount(name, accountMap, transactions) {
     let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
     accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
         let transaction = transactions[transactionID]; // pick out the specific transaction
-        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative;
+        let output = transaction.date.format('ll') + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative;
         // suture together transaction description
+        // with date converted to legible format
         // and then add value based on if debit or credit
         if (transaction.source === name) {
             output += ' ' + -transaction.value;
