@@ -1790,3 +1790,47 @@
 [2017-12-07T11:28:30.247] [INFO] SupportBank.log - loaded file: Transactions2012.txt
 [2017-12-07T11:33:09.078] [DEBUG] SupportBank.log - Entered XML reader
 [2017-12-07T11:33:09.082] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T14:51:15.515] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T14:51:15.519] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T14:59:04.020] [DEBUG] SupportBank.log - Entered JSON reader
+[2017-12-07T14:59:26.569] [DEBUG] SupportBank.log - Entered JSON reader
+[2017-12-07T14:59:26.572] [INFO] SupportBank.log - loaded file: Transactions2013.json
+[2017-12-07T15:11:47.460] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T15:11:47.464] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T15:12:42.914] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T15:12:42.917] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T15:12:56.959] [DEBUG] SupportBank.log - Entered JSON reader
+[2017-12-07T15:12:56.961] [INFO] SupportBank.log - loaded file: Transactions2013.json
+[2017-12-07T15:13:12.611] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:13:12.617] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-07T15:13:12.619] [WARN] SupportBank.log - blank input on csv file line 150
+[2017-12-07T15:13:34.425] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:13:34.427] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T15:13:34.428] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T15:13:34.429] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T15:13:34.432] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T15:13:34.438] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T15:14:28.784] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:14:28.787] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T15:14:28.789] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T15:14:28.790] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T15:14:28.797] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T15:14:28.800] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T15:16:42.596] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:16:42.599] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T15:16:42.601] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T15:16:42.602] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T15:16:42.609] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T15:16:42.613] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T15:18:40.246] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:18:40.250] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T15:18:40.251] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T15:18:40.252] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T15:18:40.260] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T15:18:40.263] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T15:21:54.294] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T15:21:54.297] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T15:21:54.299] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T15:21:54.300] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T15:21:54.307] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T15:21:54.311] [WARN] SupportBank.log - invalid date format on data entry 51
