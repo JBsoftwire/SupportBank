@@ -142,12 +142,12 @@ function processXML(entries) { //this function converts a parsed XML array of tr
     entries.forEach(function(entry) { // converts each XML entry into a Transaction object
         let transaction = new Transaction(dateParse(entry['$']['Date']), entry['Parties'][0]['From'][0], entry['Parties'][0]['To'][0], entry['Description'], parseFloat(entry['Value']));
         if (dateParse(entry['$']['Date']) === 'ERROR') {
-            logger.warn('invalid date format on transaction between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
-            console.log('Warning: invalid date format on transaction between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+            logger.warn('invalid date format on transaction between '+entry['Parties'][0]['From'][0]+' and '+entry['Parties'][0]['To'][0]);
+            console.log('Warning: invalid date format on transaction between '+entry['Parties'][0]['From'][0]+' and '+entry['Parties'][0]['To'][0]);
         }
         if (isNaN(parseFloat(entry['Value']))) {
-            logger.warn('invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
-            console.log('Warning: invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+            logger.warn('invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0]+' and '+entry['Parties'][0]['To'][0]);
+            console.log('Warning: invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0]+' and '+entry['Parties'][0]['To'][0]);
             console.log('Value will be interpreted as 0.');
             transaction.value = 0;
         };

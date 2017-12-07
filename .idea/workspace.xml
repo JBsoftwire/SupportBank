@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3dd2297a-3089-464d-b79e-b142d0793ba2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/SupportBank.js" afterPath="$PROJECT_DIR$/SupportBank.js" />
-      <change beforePath="$PROJECT_DIR$/logs/SupportBank.log" afterPath="$PROJECT_DIR$/logs/SupportBank.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="SupportBank.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SupportBank.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="249" column="48" lean-forward="false" selection-start-line="249" selection-start-column="48" selection-end-line="249" selection-end-column="48" />
+            <state relative-caret-position="1080">
+              <caret line="149" column="147" lean-forward="false" selection-start-line="149" selection-start-column="147" selection-end-line="149" selection-end-column="147" />
               <folding />
             </state>
           </provider>
@@ -27,8 +26,8 @@
       <file leaf-file-name="SupportBank.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logs/SupportBank.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1399">
+              <caret line="1790" column="70" lean-forward="true" selection-start-line="1790" selection-start-column="70" selection-end-line="1790" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -37,48 +36,8 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1520">
-              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transactions2012.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Transactions2012.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6080">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transactions2013.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Transactions2013.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transactions2014.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Transactions2014.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DodgyTransactions2015.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DodgyTransactions2015.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            <state relative-caret-position="960">
+              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -300,12 +259,12 @@
       <option name="presentableId" value="Default" />
       <updated>1512469498406</updated>
       <workItem from="1512469501025" duration="10437000" />
-      <workItem from="1512480791166" duration="47006000" />
+      <workItem from="1512480791166" duration="47833000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57443000" />
+    <option name="totallyTimeSpent" value="58270000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4812" y="745" width="3525" height="2913" extended-state="0" />
@@ -403,14 +362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/SupportBank.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Transactions2013.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -437,16 +388,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="960">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/SupportBank.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1399">
+          <caret line="1790" column="70" lean-forward="true" selection-start-line="1790" selection-start-column="70" selection-end-line="1790" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SupportBank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="249" column="48" lean-forward="false" selection-start-line="249" selection-start-column="48" selection-end-line="249" selection-end-column="48" />
+        <state relative-caret-position="1080">
+          <caret line="149" column="147" lean-forward="false" selection-start-line="149" selection-start-column="147" selection-end-line="149" selection-end-column="147" />
           <folding />
         </state>
       </provider>
