@@ -1,6 +1,7 @@
 const fs = require('fs');
 const readline = require('readline-sync');
 const xml2js = require('xml2js')
+const moment = require('moment-msdate')
 let parser = xml2js.Parser()
 
 const log4js = require('log4js');
@@ -68,20 +69,50 @@ function processLines(lines) {//the function to process each line (save the head
     }
     catch (processLines) {logger.fatal('failed to process line-split csv data')}
 }
+
+function dateParse(string) { //parses dates in DD/MM/YYYY, ISO8601, or MSDate format
+    //check for pattern 1, 2 or 3. if none, invalid date format
+    //pattern 1: DD/MM/YYYY, convert into YYYY-MM-DD and process with moment()
+    //pattern 2: ISO8601, processed directly with moment()
+    //pattern 3: OLE Automation date (MSDate), processed with moment.fromOADate()
+    let pattern1 = /^\d\d\/\d\d\/\d\d\d\d$/;
+    let pattern2 = /^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d$/;
+    let pattern3 = /^\d\d\d\d\d$/;
+    let date
+    if (pattern1.test(string)) {
+        let chunks = string.split('/');
+        chunks.reverse();
+        string = chunks[0]+'-'+chunks[1]+'-'+chunks[2];
+        date = moment(string).format('ll');
+    } else if (pattern2.test(string)) {
+        date = moment(string).format('ll');
+    } else if (pattern3.test(string)) {
+        date = moment.fromOADate(string).format('ll');
+    } else {
+        date = 'ERROR'
+    }
+    date = date.substring(0, )
+    return date
+}
+
 function processTransaction(transaction, i) { // this function converts a transaction converted from a csv string to a Transaction object
     try {
-        const datePattern = /\d\d\/\d\d\/\d\d\d\d/;
-        if (!datePattern.test(transaction[0])) {
-            logger.warn('irregular date format on data entry ' + i);
-            console.log('Warning: irregular date format on data entry ' + i);
-        };
+        // const datePattern = /\d\d\/\d\d\/\d\d\d\d/;
+        // if (!datePattern.test(transaction[0])) {
+        //     logger.warn('irregular date format on data entry ' + i);
+        //     console.log('Warning: irregular date format on data entry ' + i);
+        // };
+        if (dateParse(transaction[0]) === 'ERROR') {
+            logger.warn('invalid date format on data entry ' + i);
+            console.log('Warning: invalid date format on data entry ' + i);
+        }
         if (isNaN(parseFloat(transaction[4]))) {
             logger.warn('invalid value format on data entry ' + i);
             console.log('Warning: invalid value format on data entry ' + i);
             console.log('Value will be interpreted as 0.');
             transaction[4] = 0;
         };
-        return new Transaction(transaction[0], transaction[1], transaction[2], transaction[3], parseFloat(transaction[4]))
+        return new Transaction(dateParse(transaction[0]), transaction[1], transaction[2], transaction[3], parseFloat(transaction[4]))
     }
     catch (processTransaction) {logger.fatal('transaction data unreadable')}
 }
@@ -97,10 +128,14 @@ function processCSV(transactiondata) {
 function processJSON(entries) { //this function converts a parsed JSON array of transactions into an array of Transaction objects
     let transactions = [];
     entries.forEach(function(entry) { // converts each JSON entry into a Transaction object
-        let transaction = new Transaction(entry['Date'], entry['FromAccount'], entry['ToAccount'], entry['Narrative'], entry['Amount']);
+        let transaction = new Transaction(dateParse(entry['Date']), entry['FromAccount'], entry['ToAccount'], entry['Narrative'], entry['Amount']);
+        if (dateParse(entry['Date']) === 'ERROR') {
+            logger.warn('invalid date format on transaction between '+entry['FromAccount']+' and '+entry['ToAccount']);
+            console.log('Warning: invalid date format on transaction between '+entry['FromAccount']+' and '+entry['ToAccount']);
+        }
         if (isNaN(parseFloat(entry['Amount']))) {
-            logger.warn('invalid value format on data entry for '+entry['Date']+' between '+entry['FromAccount']+' and '+entry['ToAccount']);
-            console.log('invalid value format on data entry for '+entry['Date']+' between '+entry['FromAccount']+' and '+entry['ToAccount']);
+            logger.warn('invalid value format on transaction on '+dateParse(entry['Date'])+' between '+entry['FromAccount']+' and '+entry['ToAccount']);
+            console.log('Warning: invalid value format on transaction on '+dateParse(entry['Date'])+' between '+entry['FromAccount']+' and '+entry['ToAccount']);
             console.log('Value will be interpreted as 0.');
             transaction.value = 0;
         };
@@ -111,10 +146,14 @@ function processJSON(entries) { //this function converts a parsed JSON array of 
 function processXML(entries) { //this function converts a parsed XML array of transactions into an array of Transaction objects
     let transactions = [];
     entries.forEach(function(entry) { // converts each XML entry into a Transaction object
-        let transaction = new Transaction(entry['$']['Date'], entry['Parties'][0]['From'][0], entry['Parties'][0]['To'][0], entry['Description'], parseFloat(entry['Value']));
+        let transaction = new Transaction(dateParse(entry['$']['Date']), entry['Parties'][0]['From'][0], entry['Parties'][0]['To'][0], entry['Description'], parseFloat(entry['Value']));
+        if (dateParse(entry['$']['Date']) === 'ERROR') {
+            logger.warn('invalid date format on transaction between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+            console.log('Warning: invalid date format on transaction between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+        }
         if (isNaN(parseFloat(entry['Value']))) {
-            logger.warn('invalid value format on data entry for '+entry['$']['Date']+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
-            console.log('invalid value format on data entry for '+entry['$']['Date']+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+            logger.warn('invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
+            console.log('Warning: invalid value format on transaction on '+dateParse(entry['$']['Date'])+' between '+entry['Parties'][0]['From'][0],+' and '+entry['Parties'][0]['To'][0]);
             console.log('Value will be interpreted as 0.');
             transaction.value = 0;
         };
@@ -145,33 +184,6 @@ function populateAccounts(transactions, accountMap) {//populates the database wi
         accountMap.get(target).transactions.push(i);
     }
     return accountMap
-}
-
-
-// output functions
-
-function displayAll(accountMap) {
-
-    for (let key of accountMap.keys()) {
-        let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
-        console.log(output); //prints name and balance on new line
-    }
-}
-
-function displayAccount(name, accountMap, transactions) {
-    let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
-    accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
-        let transaction = transactions[transactionID]; // pick out the specific transaction
-        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative;
-        // suture together transaction description
-        // and then add value based on if debit or credit
-        if (transaction.source === name) {
-            output += ' ' + -transaction.value;
-        } else {
-            output += ' ' + transaction.value;
-        }
-        console.log(output)
-    })
 }
 
 // import functions
@@ -225,12 +237,41 @@ function importDataXML(filename) {
     return [accountMap, transactions]
 }
 
+// output functions
+
+function displayAll(accountMap) {
+
+    for (let key of accountMap.keys()) {
+        let output = key + ' ' + Math.round(accountMap.get(key).balance*100)/100; //collects name and rounded balance
+        console.log(output); //prints name and balance on new line
+    }
+}
+
+function displayAccount(name, accountMap, transactions) {
+    let accountTransactions = accountMap.get(name).transactions; // get list of transaction #s for the account name
+    accountTransactions.forEach(function(transactionID) { // iterate over each transaction #
+        let transaction = transactions[transactionID]; // pick out the specific transaction
+        let output = transaction.date + ' ' + transaction.source + ' ' + transaction.target + ' ' + transaction.narrative;
+        // suture together transaction description
+        // and then add value based on if debit or credit
+        if (transaction.source === name) {
+            output += ' ' + -transaction.value;
+        } else {
+            output += ' ' + transaction.value;
+        }
+        console.log(output)
+    })
+}
+
+
 // main code
 
 let command;
 let accountMap;
 let transactions;
 let loadedData;
+
+// MAIN COMMAND LOOP: valid commands are 'Import File [file]', 'List All', 'List [name]' and 'Exit'
 
 do {
     console.log('Please enter command:');

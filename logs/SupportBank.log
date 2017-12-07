@@ -1600,3 +1600,191 @@
 [2017-12-06T18:15:20.988] [INFO] SupportBank.log - loaded file: Transactions2013.json
 [2017-12-06T18:15:52.268] [INFO] SupportBank.log - loaded file: Transactions2012.txt
 [2017-12-06T18:17:47.949] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T10:04:02.080] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T10:04:02.093] [INFO] SupportBank.log - loaded file: Transactions2014.csv
+[2017-12-07T10:04:02.094] [WARN] SupportBank.log - blank input on csv file line 150
+[2017-12-07T10:04:23.282] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T10:04:23.294] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T10:04:23.296] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T10:04:23.297] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T10:04:23.298] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T10:04:23.300] [WARN] SupportBank.log - irregular date format on data entry 51
+[2017-12-07T10:04:55.747] [DEBUG] SupportBank.log - Entered JSON reader
+[2017-12-07T10:04:55.751] [INFO] SupportBank.log - loaded file: Transactions2013.json
+[2017-12-07T10:05:09.898] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T10:05:09.900] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T11:13:27.959] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T11:13:27.969] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T11:13:27.971] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T11:13:27.973] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T11:13:27.980] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T11:13:27.985] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T11:20:39.474] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T11:20:39.479] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T11:20:39.482] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T11:20:39.484] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T11:20:39.496] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T11:20:39.502] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T11:24:36.577] [DEBUG] SupportBank.log - Entered CSV reader
+[2017-12-07T11:24:36.581] [INFO] SupportBank.log - loaded file: DodgyTransactions2015.csv
+[2017-12-07T11:24:36.582] [WARN] SupportBank.log - blank input on csv file line 1
+[2017-12-07T11:24:36.584] [WARN] SupportBank.log - blank input on csv file line 54
+[2017-12-07T11:24:36.595] [WARN] SupportBank.log - invalid value format on data entry 27
+[2017-12-07T11:24:36.599] [WARN] SupportBank.log - invalid date format on data entry 51
+[2017-12-07T11:24:53.521] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T11:24:53.523] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T11:26:12.937] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T11:26:12.940] [INFO] SupportBank.log - loaded file: Transactions2012.txt
+[2017-12-07T11:26:12.984] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNJon A
+[2017-12-07T11:26:12.986] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNDan W
+[2017-12-07T11:26:12.988] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNSarah T
+[2017-12-07T11:26:12.989] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNSarah T
+[2017-12-07T11:26:12.991] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNChris W
+[2017-12-07T11:26:12.992] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNRob S
+[2017-12-07T11:26:12.993] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNSam N
+[2017-12-07T11:26:12.995] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNTodd
+[2017-12-07T11:26:12.997] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNBen B
+[2017-12-07T11:26:13.000] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNTim L
+[2017-12-07T11:26:13.002] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNTim L
+[2017-12-07T11:26:13.004] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNRob S
+[2017-12-07T11:26:13.006] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNGergana I
+[2017-12-07T11:26:13.007] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNTodd
+[2017-12-07T11:26:13.009] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNLaura B
+[2017-12-07T11:26:13.010] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNRob S
+[2017-12-07T11:26:13.011] [WARN] SupportBank.log - invalid date format on transaction between Ben B NaNChris W
+[2017-12-07T11:26:13.013] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNJon A
+[2017-12-07T11:26:13.015] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNBen B
+[2017-12-07T11:26:13.017] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNTodd
+[2017-12-07T11:26:13.019] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNStephen S
+[2017-12-07T11:26:13.021] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNDan W
+[2017-12-07T11:26:13.022] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNRob S
+[2017-12-07T11:26:13.024] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNTim L
+[2017-12-07T11:26:13.025] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNBen B
+[2017-12-07T11:26:13.026] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNBen B
+[2017-12-07T11:26:13.029] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNGergana I
+[2017-12-07T11:26:13.031] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNChris W
+[2017-12-07T11:26:13.033] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNRob S
+[2017-12-07T11:26:13.034] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNStephen S
+[2017-12-07T11:26:13.037] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNSarah T
+[2017-12-07T11:26:13.039] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNDan W
+[2017-12-07T11:26:13.041] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNTim L
+[2017-12-07T11:26:13.042] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNLaura B
+[2017-12-07T11:26:13.044] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNGergana I
+[2017-12-07T11:26:13.045] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNDan W
+[2017-12-07T11:26:13.047] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNChris W
+[2017-12-07T11:26:13.049] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNTodd
+[2017-12-07T11:26:13.050] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNChris W
+[2017-12-07T11:26:13.051] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNChris W
+[2017-12-07T11:26:13.053] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNDan W
+[2017-12-07T11:26:13.054] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNJon A
+[2017-12-07T11:26:13.055] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNTodd
+[2017-12-07T11:26:13.056] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNDan W
+[2017-12-07T11:26:13.057] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNRob S
+[2017-12-07T11:26:13.059] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNBen B
+[2017-12-07T11:26:13.060] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNDan W
+[2017-12-07T11:26:13.061] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNSam N
+[2017-12-07T11:26:13.063] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNBen B
+[2017-12-07T11:26:13.066] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNTim L
+[2017-12-07T11:26:13.067] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNLaura B
+[2017-12-07T11:26:13.069] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNBen B
+[2017-12-07T11:26:13.071] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNSam N
+[2017-12-07T11:26:13.072] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNDan W
+[2017-12-07T11:26:13.074] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNRob S
+[2017-12-07T11:26:13.075] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNSam N
+[2017-12-07T11:26:13.076] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNChris W
+[2017-12-07T11:26:13.078] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNChris W
+[2017-12-07T11:26:13.079] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNBen B
+[2017-12-07T11:26:13.081] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNTim L
+[2017-12-07T11:26:13.083] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNJon A
+[2017-12-07T11:26:13.084] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNJon A
+[2017-12-07T11:26:13.086] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNDan W
+[2017-12-07T11:26:13.087] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNStephen S
+[2017-12-07T11:26:13.088] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNChris W
+[2017-12-07T11:26:13.090] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNStephen S
+[2017-12-07T11:26:13.091] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNChris W
+[2017-12-07T11:26:13.092] [WARN] SupportBank.log - invalid date format on transaction between Ben B NaNChris W
+[2017-12-07T11:26:13.093] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNSam N
+[2017-12-07T11:26:13.095] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNTodd
+[2017-12-07T11:26:13.096] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNJon A
+[2017-12-07T11:26:13.098] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNStephen S
+[2017-12-07T11:26:13.100] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNJon A
+[2017-12-07T11:26:13.101] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNTim L
+[2017-12-07T11:26:13.104] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNDan W
+[2017-12-07T11:26:13.106] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNBen B
+[2017-12-07T11:26:13.107] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNRob S
+[2017-12-07T11:26:13.108] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNBen B
+[2017-12-07T11:26:13.110] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNLaura B
+[2017-12-07T11:26:13.112] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNTodd
+[2017-12-07T11:26:13.114] [WARN] SupportBank.log - invalid date format on transaction between Ben B NaNChris W
+[2017-12-07T11:26:13.116] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNJon A
+[2017-12-07T11:26:13.119] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNRob S
+[2017-12-07T11:26:13.126] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNSam N
+[2017-12-07T11:26:13.127] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNTodd
+[2017-12-07T11:26:13.130] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNDan W
+[2017-12-07T11:26:13.133] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNChris W
+[2017-12-07T11:26:13.136] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNSam N
+[2017-12-07T11:26:13.137] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNSam N
+[2017-12-07T11:26:13.138] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNSam N
+[2017-12-07T11:26:13.139] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNDan W
+[2017-12-07T11:26:13.141] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNLaura B
+[2017-12-07T11:26:13.142] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNDan W
+[2017-12-07T11:26:13.143] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNTodd
+[2017-12-07T11:26:13.147] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNTim L
+[2017-12-07T11:26:13.149] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNStephen S
+[2017-12-07T11:26:13.152] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNStephen S
+[2017-12-07T11:26:13.155] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNGergana I
+[2017-12-07T11:26:13.157] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNRob S
+[2017-12-07T11:26:13.158] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNDan W
+[2017-12-07T11:26:13.160] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNSam N
+[2017-12-07T11:26:13.161] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNJon A
+[2017-12-07T11:26:13.164] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNDan W
+[2017-12-07T11:26:13.167] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNSam N
+[2017-12-07T11:26:13.169] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNTim L
+[2017-12-07T11:26:13.171] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNChris W
+[2017-12-07T11:26:13.174] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNChris W
+[2017-12-07T11:26:13.176] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNTim L
+[2017-12-07T11:26:13.177] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNJon A
+[2017-12-07T11:26:13.180] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNJon A
+[2017-12-07T11:26:13.181] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNGergana I
+[2017-12-07T11:26:13.184] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNChris W
+[2017-12-07T11:26:13.185] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNStephen S
+[2017-12-07T11:26:13.187] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNBen B
+[2017-12-07T11:26:13.189] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNTodd
+[2017-12-07T11:26:13.191] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNChris W
+[2017-12-07T11:26:13.193] [WARN] SupportBank.log - invalid date format on transaction between Laura B NaNDan W
+[2017-12-07T11:26:13.194] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNGergana I
+[2017-12-07T11:26:13.196] [WARN] SupportBank.log - invalid date format on transaction between Ben B NaNLaura B
+[2017-12-07T11:26:13.198] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNDan W
+[2017-12-07T11:26:13.200] [WARN] SupportBank.log - invalid date format on transaction between Todd NaNBen B
+[2017-12-07T11:26:13.204] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNLaura B
+[2017-12-07T11:26:13.206] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNSam N
+[2017-12-07T11:26:13.208] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNChris W
+[2017-12-07T11:26:13.211] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNSam N
+[2017-12-07T11:26:13.214] [WARN] SupportBank.log - invalid date format on transaction between Ben B NaNTodd
+[2017-12-07T11:26:13.216] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNTim L
+[2017-12-07T11:26:13.217] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNSarah T
+[2017-12-07T11:26:13.220] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNSarah T
+[2017-12-07T11:26:13.221] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNDan W
+[2017-12-07T11:26:13.223] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNTim L
+[2017-12-07T11:26:13.224] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNChris W
+[2017-12-07T11:26:13.225] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNRob S
+[2017-12-07T11:26:13.227] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNBen B
+[2017-12-07T11:26:13.229] [WARN] SupportBank.log - invalid date format on transaction between Dan W NaNGergana I
+[2017-12-07T11:26:13.232] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNTodd
+[2017-12-07T11:26:13.234] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNTodd
+[2017-12-07T11:26:13.237] [WARN] SupportBank.log - invalid date format on transaction between Chris W NaNSarah T
+[2017-12-07T11:26:13.239] [WARN] SupportBank.log - invalid date format on transaction between Gergana I NaNSarah T
+[2017-12-07T11:26:13.242] [WARN] SupportBank.log - invalid date format on transaction between Jon A NaNTim L
+[2017-12-07T11:26:13.243] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNSarah T
+[2017-12-07T11:26:13.245] [WARN] SupportBank.log - invalid date format on transaction between Sam N NaNLaura B
+[2017-12-07T11:26:13.247] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNJon A
+[2017-12-07T11:26:13.247] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNStephen S
+[2017-12-07T11:26:13.251] [WARN] SupportBank.log - invalid date format on transaction between Sarah T NaNLaura B
+[2017-12-07T11:26:13.252] [WARN] SupportBank.log - invalid date format on transaction between Stephen S NaNSarah T
+[2017-12-07T11:26:13.254] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNJon A
+[2017-12-07T11:26:13.255] [WARN] SupportBank.log - invalid date format on transaction between Rob S NaNChris W
+[2017-12-07T11:26:13.257] [WARN] SupportBank.log - invalid date format on transaction between Tim L NaNTodd
+[2017-12-07T11:26:37.742] [DEBUG] SupportBank.log - Entered JSON reader
+[2017-12-07T11:26:37.743] [INFO] SupportBank.log - loaded file: Transactions2013.json
+[2017-12-07T11:28:30.243] [DEBUG] SupportBank.log - Entered XML reader
+[2017-12-07T11:28:30.247] [INFO] SupportBank.log - loaded file: Transactions2012.txt
